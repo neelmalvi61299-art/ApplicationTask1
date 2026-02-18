@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:padding="@dimen/_15sdp"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_15sdp"
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+
+            android:fontFamily="sans-serif"/>
+
+
+
+
+        <LinearLayout
+            android:layout_gravity="right"
+            android:gravity="right"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:tint="@color/white"
+                android:id="@+id/btnaccending"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_up"
+                android:background="@drawable/vector_sgape"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                />
+
+        <ImageView
+            android:tint="@color/white"
+            android:id="@+id/btndecending"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/ic_down"
+            android:background="@drawable/vector_sgape"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/searchll"
+        android:layout_below="@+id/ll1"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/search_shape"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_centerVertical="true"
+            android:id="@+id/edttext"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:hint="Search Item"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_toLeftOf="@+id/edtsearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/_3sdp"
+            android:id="@+id/edtsearch"
+            android:src="@drawable/search"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/vector_sgape"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/searchll"
+        android:layout_marginTop="@dimen/_10sdp"
+
+        android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:id="@+id/rvc"/>
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_add"
+        android:id="@+id/btnadd"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/round_shape"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        />
+    </RelativeLayout>
+
+</RelativeLayout>
